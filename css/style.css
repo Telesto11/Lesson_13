@@ -1,0 +1,180 @@
+/* @import */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+/* Обнулення */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: none;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+img{
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+input,
+button,
+textarea {
+	font-family: inherit;
+	font-size: inherit;
+}
+button {
+	cursor: pointer;
+	color: inherit;
+	background-color: inherit;
+}
+html,
+body{
+	height: 100%;
+}
+body {
+	line-height: 1;
+
+}
+
+.wrapper {
+}
+.main {
+}
+.page {
+	padding-top: 20px;
+}
+.page__container{
+position: relative;
+animation: background-color 8s ease forwards;
+
+}
+@keyframes background-color {
+	0% {
+		background-color: #fff;
+	}
+	100% {
+		background: gray;
+	}
+}
+.page__title {
+	font-size: 24px;
+	font-weight: 900;
+	margin-bottom: 30px;
+	text-align: center;
+	line-height: 1.3;
+	animation: title 3s linear 0.5s forwards;
+	opacity: 0;
+}
+
+.page__title::after{
+	animation: load 2s ease 4s infinite;
+	content: '...';
+opacity: 0;
+}
+
+@keyframes load {
+	0% {
+		
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.page__text {
+	font-size: 18px;
+	font-weight: 700;
+line-height: 1.3;
+text-align: center;
+
+}
+
+.page__text {
+	animation: text 3s linear 1s forwards;
+	opacity: 0;
+	padding-bottom: 10px;
+}
+@keyframes text {
+	0% {
+		transform: translate(-150%, 0%);
+
+	}
+	100% {
+		transform: translate(0px, 0%);
+		opacity: 1;
+	}
+}
+@keyframes title {
+	0% {
+		transform: translate(150%, 0%);
+
+	}
+	100% {
+		transform: translate(0px, 0%);
+		opacity: 1;
+	}
+}
+
+.page__wheels{
+	display: inline-block;
+	animation: wheel1 5s linear infinite;
+padding-bottom: 9px;
+}
+
+
+.page__wheel {
+width: 200px;
+height: 200px;
+background-color:black;
+outline: 10px dashed rgb(197, 137, 33);
+border-radius: 50%;
+position: relative;
+display: inline-block;
+animation: wheel 5s linear infinite;
+}
+@keyframes wheel{
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+	
+}
+@keyframes wheel1{
+	0% {
+		transform:translate(-150%, 0px);
+	}
+	100% {
+		transform:translate(800%, 0px);
+	}
+	
+}
+
+
+
+.page__position{
+position: absolute;
+height: 100px;
+width: 100px;
+background-color: gray;
+top: 25%;
+left: 25%;
+border-radius: 50%;
+
+}
+
+
+
